@@ -22,11 +22,7 @@ user : User;
   login(){
     this.accountServices.login(this.model).subscribe(respose => {
       this.router.navigateByUrl('/members');
-    },
-    error => {
-      console.log(error);
-      this.toastr.error(error.error);
-    });
+    })
   }
 
   logout(){
